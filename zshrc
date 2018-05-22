@@ -1,21 +1,14 @@
-#
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/lwitz/.oh-my-zsh
+export ZSH=/Users/dveloso/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="kphoen"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -92,35 +85,36 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# chruby
-# vi: set ft=sh :
+# Projects
+alias work="cd $HOME/work/"
+alias campus="cd $HOME/work/campus-app/"
+alias campus_cr="cd $HOME/work/campus-cr/"
+alias campus=_pr"cd $HOME/work/campus-pr/"
 
-# aliases
+# Run Campus React
 alias start_be="REACT_ON_RAILS_ENV=hot PORT=3000 bundle exec rails s -b 0.0.0.0"
 alias start_fe="REACT_ON_RAILS_ENV=hot npm run hot"
 
-alias ipxing="ifconfig | grep 172 | awk '{print $2}'"
+# Hammerhead
+alias chrome=chromedriver
 
-## git aliases
-alias gdl="git diff HEAD^ HEAD"
+#git aliases
+alias rspecdif='bin/rspec $(gss | grep spec.rb | cut -c 3-)'
+alias rubocopdif='rubocop $(gss | cut -c 3-)'
 
- if [ "$CHRUBY_VERSION"  ]; then
-   return
- fi
+# export ANDROID_HOME=/Users/dveloso/Library/Android/sdk
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
 
- if [ -n "$BASH_VERSION"   ] || [ -n "$ZSH_VERSION"   ]; then
-   if [ -f  /usr/local/share/chruby/chruby.sh  ]; then
-       source /usr/local/share/chruby/chruby.sh
-       source /usr/local/share/chruby/auto.sh
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
+export PATH="/usr/local/Cellar/mysql@5.6/5.6.37/bin:$PATH"
+fpath=(~/xing-scripts/completion/zsh $fpath)
 
-       chruby 2.4
-   fi
- fi
+# Pairing script
+export PATH="$HOME/.bin:$PATH"
 
-# base 16 shell 
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="/Users/dveloso/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

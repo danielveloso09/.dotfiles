@@ -13,3 +13,6 @@ Just follow https://github.com/VundleVim/Vundle.vim#quick-start
 
 ### Installing Plugins
 After install VundleVim, open Vim and in Visual mode type :PluginInstall.
+
+### Install iTerm Profile
+Open iTerm > Preferences > Load preferences from a custom folder or URL > '/this/project/folder/iterm/iterm_profile.plist'

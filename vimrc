@@ -16,23 +16,6 @@ set cc=80
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-nnoremap <Left> :echo "No left for you!"<CR>
-vnoremap <Left> :<C-u>echo "No left for you!"<CR>
-inoremap <Left> <C-o>:echo "No left for you!"<CR>
-
-nnoremap <Right> :echo "No right for you!"<CR>
-vnoremap <Right> :<C-u>echo "No right for you!"<CR>
-inoremap <Right> <C-o>:echo "No right for you!"<CR>
-
-nnoremap <Up> :echo "No up for you!"<CR>
-vnoremap <Up> :<C-u>echo "No up for you!"<CR>
-inoremap <Up> <C-o>:echo "No up for you!"<CR>
-
-nnoremap <Down> :echo "No down for you!"<CR>
-vnoremap <Down> :<C-u>echo "No down for you!"<CR>
-inoremap <Down> <C-o>:echo "No down for you!"<CR>
-
-
 " let test#ruby#spec_framework = "minitest"
 let test#ruby#spec_framework = "rspec"
 nnoremap <leader><leader>t :call SwitchSpecCommand()<cr>
@@ -111,8 +94,8 @@ set guicursor=i:ver25-iCursor-blinkon200-blinkoff200-blinkwait2000
 set guicursor=n:ver25-iCursor
 
 "color dracula
-"color jellybeans
-color base16-tomorrow
+color jellybeans
+"color base16-tomorrow
 
 "GitGutterEnable
 let g:gitgutter_realtime=0

@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 alias work="cd $HOME/work/"
 alias campus="cd $HOME/work/campus-app/"
 alias campus_cr="cd $HOME/work/campus-cr/"
-alias campus=_pr"cd $HOME/work/campus-pr/"
+alias campus_pr="cd $HOME/work/campus-pr/"
 
 # Run Campus React
 alias start_be="REACT_ON_RAILS_ENV=hot PORT=3000 bundle exec rails s -b 0.0.0.0"

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/dveloso/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -91,7 +91,7 @@ alias campus="cd $HOME/work/campus-app/"
 alias campus_cr="cd $HOME/work/campus-cr/"
 alias campus_pr="cd $HOME/work/campus-pr/"
 
-# Run Campus React
+# Run Application
 alias start_be="REACT_ON_RAILS_ENV=hot PORT=3000 bundle exec rails s -b 0.0.0.0"
 alias start_fe="REACT_ON_RAILS_ENV=hot npm run hot"
 
@@ -102,9 +102,6 @@ alias chrome=chromedriver
 alias rspecdif='bin/rspec $(gss | grep spec.rb | cut -c 3-)'
 alias rubocopdif='rubocop $(gss | cut -c 3-)'
 
-# export ANDROID_HOME=/Users/dveloso/Library/Android/sdk
-export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
@@ -114,7 +111,7 @@ fpath=(~/xing-scripts/completion/zsh $fpath)
 # Pairing script
 export PATH="$HOME/.bin:$PATH"
 
-export NVM_DIR="/Users/dveloso/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

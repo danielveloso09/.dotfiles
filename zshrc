@@ -95,10 +95,11 @@ alias campus_pr="cd $HOME/work/campus-pr/"
 alias start_be="REACT_ON_RAILS_ENV=hot PORT=3000 bundle exec rails s -b 0.0.0.0"
 alias start_fe="REACT_ON_RAILS_ENV=hot npm run hot"
 
-# Hammerhead
+# Other stuff
 alias chrome=chromedriver
+alias find_schokotron="sudo arp-scan -l |grep b8:27:eb:3c:4a:78"
 
-#git aliases
+# Git aliases
 alias rspecdif='bin/rspec $(gss | grep spec.rb | cut -c 3-)'
 alias rubocopdif='rubocop $(gss | cut -c 3-)'
 

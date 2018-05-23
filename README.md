@@ -1,6 +1,6 @@
 # My .dotfiles
 
-Thanks to Luís Witz that gave me a good start. 
+Thanks to @luiswitz that gave me a good start. 
 
 This is mostly a personal dotenvs configuration, but feel free to use it.
 

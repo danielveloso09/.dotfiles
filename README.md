@@ -1,11 +1,11 @@
 # My .dotfiles
 
-Thanks to Luís Witz that gave me a good start. 
+Thanks to [@luiswitz](https://github.com/luiswitz) that gave me a good start. 
 
 This is mostly a personal dotenvs configuration, but feel free to use it.
 
 ## Things to improve
-- Automatically install VundleVim (https://github.com/VundleVim/Vundle.vim)
+- Automatically install [VundleVim](https://github.com/VundleVim/Vundle.vim)
 - Automatically install all Plugins
 
 ### Installing VundleVim

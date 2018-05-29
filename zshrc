@@ -101,8 +101,8 @@ alias find_schokotron="sudo arp-scan -l |grep b8:27:eb:3c:4a:78"
 
 # Git aliases
 alias rspecdiff='bin/rspec $(gss_diff | grep spec.rb)'
-alias rubocopdiff='rubocop $(gss_diff)'
-alias reekdiff='rubocop $(gss_diff)'
+alias rubocopdiff='rubocop -a $(gss_diff)'
+alias reekdiff='reek $(gss_diff)'
 
 # Git diff to help with dev stuff
 gss_diff() {

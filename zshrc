@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -100,9 +100,14 @@ alias chrome=chromedriver
 alias find_schokotron="sudo arp-scan -l |grep b8:27:eb:3c:4a:78"
 
 # Git aliases
-alias rspecdif='bin/rspec $(gss | grep spec.rb | cut -c 3-)'
-alias rubocopdif='rubocop $(gss | cut -c 3-)'
+alias rspecdiff='bin/rspec $(gss_diff | grep spec.rb)'
+alias rubocopdiff='rubocop $(gss_diff)'
+alias reekdiff='rubocop $(gss_diff)'
 
+# Git diff to help with dev stuff
+gss_diff() {
+  (gss | grep ? | cut -c 3-) && (gss | grep M | cut -c 3-)
+}
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
@@ -112,7 +117,7 @@ fpath=(~/xing-scripts/completion/zsh $fpath)
 # Pairing script
 export PATH="$HOME/.bin:$PATH"
 
-export NVM_DIR="~/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

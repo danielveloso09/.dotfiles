@@ -92,6 +92,7 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
 set guicursor=i:ver25-iCursor-blinkon200-blinkoff200-blinkwait2000
 set guicursor=n:ver25-iCursor
+set noswapfile
 
 "color dracula
 color jellybeans

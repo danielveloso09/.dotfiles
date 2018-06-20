@@ -30,6 +30,12 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+# Git config backup
+echo "backup .gitconfig"
+cp ~/.gitconfig $olddir
+echo "copying a default .gitconfig file"
+cp git/.gitconfig ~/
+
 # create and move vim files to vim foler
 echo "Creating vim folder"
 mkdir -p ~/.vim
@@ -41,7 +47,9 @@ for vim_file in $VIM_FOLDER; do
   cp $vim_file ~/.vim/
 done
 
-echo "backup .gitconfig"
-cp ~/.gitconfig $olddir
-echo "copying a default .gitconfig file"
-cp git/.gitconfig ~/
+# Dependencies
+echo "Installing Vundle"
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim || echo "Vundle already installed"
+
+# Installing vim plugins
+vim +PluginInstall +qall

@@ -93,7 +93,6 @@ alias campus_pr="cd $HOME/work/campus-pr/"
 
 # Run Application
 alias start_be="REACT_ON_RAILS_ENV=hot PORT=3000 bundle exec rails s -b 0.0.0.0"
-alias start_fe="REACT_ON_RAILS_ENV=hot npm run hot"
 
 # Other stuff
 alias chrome=chromedriver
@@ -111,6 +110,7 @@ gss_diff() {
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
+export PATH="$PATH:~/work/olympus-tools/bin"
 export PATH="/usr/local/Cellar/mysql@5.6/5.6.37/bin:$PATH"
 fpath=(~/xing-scripts/completion/zsh $fpath)
 

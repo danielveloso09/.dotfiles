@@ -102,11 +102,17 @@ alias find_schokotron="sudo arp-scan -l |grep b8:27:eb:3c:4a:78"
 alias rspecdiff='bin/rspec $(gss_diff | grep spec.rb)'
 alias rubocopdiff='rubocop -a $(gss_diff)'
 alias reekdiff='reek $(gss_diff)'
+alias crdiff='rubocop -a $(git_diff) & reek $(git_diff)'
 
 # Git diff to help with dev stuff
 gss_diff() {
   (gss | grep ? | cut -c 3-) && (gss | grep M | cut -c 3-)
 }
+
+git_diff() {
+  (git diff develop --name-only --diff-filter=d -- ':(exclude)db/*')
+}
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"

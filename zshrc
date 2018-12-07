@@ -86,13 +86,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Projects
-alias work="cd $HOME/work/"
 alias campus="cd $HOME/work/campus-app/"
 alias campus_cr="cd $HOME/work/campus-cr/"
 alias campus_pr="cd $HOME/work/campus-pr/"
 
-# Run Application
-alias start_be="REACT_ON_RAILS_ENV=hot PORT=3000 bundle exec rails s -b 0.0.0.0"
+p() {
+  cd $HOME/work/$1
+}
 
 # Other stuff
 alias chrome=chromedriver

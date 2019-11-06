@@ -1,0 +1,46 @@
+{
+  "bold_folder_labels": true,
+  "caret_extra_bottom": 0,
+  "caret_extra_top": 0,
+  "caret_extra_width": 1,
+  "caret_style": "phase",
+  "color_scheme": "Packages/User/SublimeLinter/Afterglow-twilight (SL).tmTheme",
+  "draw_white_space": "all",
+  "ensure_newline_at_eof_on_save": true,
+  "folder_exclude_patterns":
+  [
+    "*/.git/*",
+    "*/node_modules/*",
+    "*/priv/static/*"
+  ],
+  "font_face": "monaco",
+  "font_size": 12,
+  "highlight_line": false,
+  "highlight_modified_tabs": true,
+  "ignored_packages":
+  [
+    "Markdown",
+    "Vintage"
+  ],
+  "indent_guide_options":
+  [
+    "draw_normal",
+    "draw_active"
+  ],
+  "index_exclude_patterns":
+  [
+    "*/.git/*",
+    "*/node_modules/*",
+    "*/priv/static/*"
+  ],
+  "index_files": true,
+  "line_padding_bottom": 1,
+  "line_padding_top": 1,
+  "scroll_past_end": true,
+  "tab_size": 2,
+  "tabs_small": true,
+  "theme": "Afterglow.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "word_wrap": true
+}

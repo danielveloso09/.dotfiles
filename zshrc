@@ -110,7 +110,7 @@ gss_diff() {
 }
 
 git_diff() {
-  (git diff develop --name-only --diff-filter=d -- ':(exclude)db/*')
+  (git diff master --name-only --diff-filter=d -- ':(exclude)db/*')
 }
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

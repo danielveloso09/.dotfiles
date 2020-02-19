@@ -116,9 +116,7 @@ git_diff() {
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
-export PATH="$PATH:~/work/olympus-tools/bin"
 export PATH="/usr/local/Cellar/mysql@5.6/5.6.37/bin:$PATH"
-fpath=(~/xing-scripts/completion/zsh $fpath)
 
 # Pairing script
 export PATH="$HOME/.bin:$PATH"

@@ -9,9 +9,13 @@ Install Packages:
 - AdvancedNewFile
 - All Autocomplete
 - Git
+- GraphQL
+- Rspec
+- rspec-snippets
 - Rubocop
 - Rubyfmt
 - Side Bar
-- SublimeLinter
+- SideBarEnhancements
 - SublimeHighlight
+- SublimeLinter
 - TestRSpec

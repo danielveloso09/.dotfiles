@@ -86,9 +86,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Projects
-alias campus="cd $HOME/work/campus-app/"
-alias campus_cr="cd $HOME/work/campus-cr/"
-alias campus_pr="cd $HOME/work/campus-pr/"
+alias knok="cd $HOME/work/knok/"
+alias kbackend="cd $HOME/work/knok/knok-backend/"
 
 p() {
   cd $HOME/work/$1
@@ -110,7 +109,13 @@ gss_diff() {
 }
 
 git_diff() {
-  (git diff master --name-only --diff-filter=d -- ':(exclude)db/*')
+  base=$1
+  if [ $# -eq 0 ]
+  then
+    base='development'
+  fi
+
+  (git diff $base --name-only --diff-filter=d -- ':(exclude)db/*')
 }
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

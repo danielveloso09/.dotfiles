@@ -8,14 +8,12 @@ Copy `sublime-settings` into `Preferences.sublime-settings` (cmd + ,).
 Install Packages:
 - AdvancedNewFile
 - All Autocomplete
+- BeautifyRuby
+- BracketHighlighter
 - Git
-- GraphQL
 - Rspec
 - rspec-snippets
 - Rubocop
-- Rubyfmt
-- Side Bar
 - SideBarEnhancements
 - SublimeHighlight
 - SublimeLinter
-- TestRSpec

@@ -86,8 +86,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Projects
-alias knok="cd $HOME/work/knok/"
-alias kbackend="cd $HOME/work/knok/knok-backend/"
+alias kbackend="cd $HOME/work/backend/"
+alias kbackend2="cd $HOME/work/backend-2/"
 
 p() {
   cd $HOME/work/$1
@@ -99,9 +99,9 @@ alias find_schokotron="sudo arp-scan -l |grep b8:27:eb:3c:4a:78"
 
 # Git aliases
 alias rspecdiff='bin/rspec $(gss_diff | grep spec.rb)'
-alias rubocopdiff='rubocop -a $(gss_diff)'
+alias rubocopdiff='rubocop -a $(gss_diff | grep .rb)'
 alias reekdiff='reek $(gss_diff)'
-alias crdiff='rubocop -a $(git_diff) & reek $(git_diff)'
+alias branchdiff='rubocop -a $(git_diff | grep .rb)'
 
 # Git diff to help with dev stuff
 gss_diff() {

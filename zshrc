@@ -86,8 +86,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Projects
-alias kbackend="cd $HOME/work/backend/"
-alias kbackend2="cd $HOME/work/backend-2/"
+kbackend() {
+  cd $HOME/work/backend$1
+}
 
 p() {
   cd $HOME/work/$1
@@ -101,7 +102,16 @@ alias find_schokotron="sudo arp-scan -l |grep b8:27:eb:3c:4a:78"
 alias rspecdiff='bin/rspec $(gss_diff | grep spec.rb)'
 alias rubocopdiff='rubocop -a $(gss_diff | grep .rb)'
 alias reekdiff='reek $(gss_diff)'
-alias branchdiff='rubocop -a $(git_diff | grep .rb)'
+alias branchdiff='rubocop -a $(git_diff | grep -v "erb" | grep .rb)'
+
+alias heroku_console='live_profile && heroku run console --app $1'
+
+# Set Profile
+alias live_profile='change_profile "live"'
+alias my_profile='change_profile "my-profile"'
+change_profile() {
+  echo -e "\033]50;SetProfile=$1\a"
+}
 
 # Git diff to help with dev stuff
 gss_diff() {
@@ -128,8 +138,12 @@ export PATH="$HOME/.bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/danielveloso/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+

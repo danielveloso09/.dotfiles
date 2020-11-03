@@ -94,10 +94,6 @@ p() {
   cd $HOME/work/$1
 }
 
-# Other stuff
-alias chrome=chromedriver
-alias find_schokotron="sudo arp-scan -l |grep b8:27:eb:3c:4a:78"
-
 # Git aliases
 alias rspecdiff='bin/rspec $(gss_diff | grep spec.rb)'
 alias rubocopdiff='rubocop -a $(gss_diff | grep .rb)'
@@ -144,8 +140,6 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/danielveloso/Library/Caches/heroku/autocomplete/
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
-export PATH="/usr/local/Cellar/mysql@5.6/5.6.37/bin:$PATH"
 
 # Pairing script
 export PATH="$HOME/.bin:$PATH"

@@ -105,6 +105,8 @@ alias reekdiff='reek $(gss_diff)'
 alias branchdiff='rubocop -a $(git_diff | grep -v "erb" | grep .rb)'
 
 alias heroku_console='live_profile && heroku run console --app $1'
+alias heroku_bash='live_profile && heroku run bash --app $1'
+alias heroku_logs='heroku logs --tail --app $1'
 
 # Set Profile
 alias live_profile='change_profile "live"'
@@ -128,14 +130,6 @@ git_diff() {
   (git diff $base --name-only --diff-filter=d -- ':(exclude)db/*')
 }
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
-export PATH="/usr/local/Cellar/mysql@5.6/5.6.37/bin:$PATH"
-
-# Pairing script
-export PATH="$HOME/.bin:$PATH"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -145,5 +139,13 @@ export NVM_DIR="$HOME/.nvm"
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/danielveloso/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+[ -e "${HOME}/.iterm2_shell_integration.zsh" ] && source "${HOME}/.iterm2_shell_integration.zsh" || true
+[ -s "$HOME/.kiex/scripts/kiex" ] && source "$HOME/.kiex/scripts/kiex"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
+export PATH="/usr/local/Cellar/mysql@5.6/5.6.37/bin:$PATH"
+
+# Pairing script
+export PATH="$HOME/.bin:$PATH"

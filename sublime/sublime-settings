@@ -11,10 +11,14 @@
   [
     "*/.git/*",
     "*/node_modules/*",
-    "*/priv/static/*"
+    "*/priv/static/*",
+    "*/_build/*",
+    "*/deps/*",
+    "*/pgdata/*",
+    "*/tmp/cache/*"
   ],
   "font_face": "monaco",
-  "font_size": 12,
+  "font_size": 11,
   "highlight_line": false,
   "highlight_modified_tabs": true,
   "ignored_packages":
@@ -31,7 +35,11 @@
   [
     "*/.git/*",
     "*/node_modules/*",
-    "*/priv/static/*"
+    "*/priv/static/*",
+    "*/_build/*",
+    "*/deps/*",
+    "*/pgdata/*",
+    "*/tmp/cache/*"
   ],
   "index_files": true,
   "line_padding_bottom": 1,
